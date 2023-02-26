@@ -1,0 +1,18 @@
+.presentation{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.presentation img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.presentation .attri-img {
+    width: 20%;
+}
