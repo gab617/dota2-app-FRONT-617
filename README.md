@@ -10,5 +10,5 @@ Con tres arreglos de obejetos separados por atributo principal, se renderizan 3 
 
 Mediante un formulario es posible buscar por el nombre (Primera letra en mayus) cualquier heroe de la lista.
 
-Uso de contexto, algunos hooks, y componetizacion.
+Uso de contexto, estados, efectos, hooks declarados, y componetizacion.
 Filtros, eventos, formularios.
