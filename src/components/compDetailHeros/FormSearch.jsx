@@ -2,9 +2,12 @@ import { useContext } from "react"
 import { Context } from "../../context/context"
 import { useSearch } from "../../hooks/useSearch"
 import './FormSearch.css'
+import { UseFilters } from "../../hooks/useFilters"
 
 export function FormSearch({hoverText}) {
     const { handleOffOver } = useContext(Context) //Contexto
+    const{defectUrlImg, handleImageError} = UseFilters()
+
     const {
         handleSearch,
         herosFound,
@@ -26,7 +29,8 @@ export function FormSearch({hoverText}) {
                                     //HOVER Y NO HOVER  
                                     onMouseOver={() => handleOver(hero)}
                                     onMouseOut={() => handleOffOver()}
-                                    src={hero.image} alt="" />
+                                    src={hero.image} alt="" 
+                                    onError={handleImageError}/>
                             </li>
                         ))
                     }

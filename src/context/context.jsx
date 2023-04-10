@@ -1,12 +1,12 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 import {dataHeros2} from '../mocks/dataHeros2.json'
 
 export const Context = createContext({})
 
 export function ContextProvider({ children }) {
     
-    const [data2] = useState(dataHeros2)
-    const [heroSelected, setHeroSelected] = useState(data2[0])
+    const [data2,setData] = useState([])
+    const [heroSelected, setHeroSelected] = useState({})
     const [heroHover, setHeroHover] = useState('')
 
     function handleOver (hero){
@@ -31,6 +31,28 @@ export function ContextProvider({ children }) {
         primary_attr: ''
     })
 
+
+    //Llamada a api en ves de usar mocks.
+    //Asigna todos los datos de todos los heroes, 
+    //Asigna heroe por defecto seleccionado, el primero de la lista
+    //Si no hay respues del sevidor, se le asigna el 'mock'
+    useEffect(()=>{
+        fetch('http://localhost:3001/api/dota2')
+        .then(response => response.json())
+        .then(json => {
+            console.log(json.dataHeros2)
+            setData(json.dataHeros2)
+            setHeroSelected(json.dataHeros2[0])
+        })
+        .catch(err =>{
+            setData(dataHeros2)
+            setHeroSelected(dataHeros2[0])
+            console.clear()
+            console.log('ERROR EN SERVIDOR, SOLICIANDO DATOS GUARDADOS')
+
+        })
+
+    },[])
 
     return (
         <Context.Provider value={{

@@ -2,11 +2,11 @@ import { useContext } from "react"
 import { Context } from "../context/context"
 import { UseFilters } from "../hooks/useFilters"
 import { DetailHero } from "./DetailHero"
-import { HeroCard } from "./HeroCard"
 import './HerosView.css'
+import { ListHerosSection } from "./ListHerosSection"
 export function HerosView() {
     const { selectHero, data2 } = useContext(Context)
-    const { filterHeros } = UseFilters()
+    const { filterHeros, handleImageError } = UseFilters()
 
 
     const filteredHerosStr = filterHeros(data2, 0) //Fuerza
@@ -20,33 +20,24 @@ export function HerosView() {
     return (
         <div className="principal">
             <div className="list-heroes">
-                <ul className="str-view">
-                    {
-                        filteredHerosStr.map((hero) => (
-                            <li key={hero.id}>
-                                <HeroCard hero={hero} handleClick={handleClick} />
-                            </li>
-                        ))
-                    }
-                </ul>
-                <ul className="agi-view">
-                    {
-                        filteredHerosAgi.map((hero) => (
-                            <li key={hero.id}>
-                                <HeroCard hero={hero} handleClick={handleClick} />
-                            </li>
-                        ))
-                    }
-                </ul>
-                <ul className="int-view">
-                    {
-                        filteredHerosInt.map((hero) => (
-                            <li key={hero.id}>
-                                <HeroCard hero={hero} handleClick={handleClick} />
-                            </li>
-                        ))
-                    }
-                </ul>
+                <ListHerosSection
+                    filteredHeros={filteredHerosStr}
+                    handleImageError={handleImageError}
+                    handleClick={handleClick}
+                    className={'str-view'}
+                />
+                <ListHerosSection
+                    filteredHeros={filteredHerosAgi}
+                    handleImageError={handleImageError}
+                    handleClick={handleClick}
+                    className={'agi-view'}
+                />
+                <ListHerosSection
+                    filteredHeros={filteredHerosInt}
+                    handleImageError={handleImageError}
+                    handleClick={handleClick}
+                    className={'int-view'}
+                />
             </div>
             <DetailHero />
         </div>

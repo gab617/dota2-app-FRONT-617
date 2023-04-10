@@ -1,5 +1,6 @@
 
 .HeroCard {
+    transition: 0.2s;
     background-color: rgba(245, 245, 245, 0.545);
     height: 90px;
     margin-bottom:8px;
