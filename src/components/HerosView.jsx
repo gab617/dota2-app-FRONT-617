@@ -4,8 +4,10 @@ import { UseFilters } from "../hooks/useFilters"
 import { DetailHero } from "./DetailHero"
 import './HerosView.css'
 import { ListHerosSection } from "./ListHerosSection"
-export function HerosView() {
-    const { selectHero, data2 } = useContext(Context)
+import { Detail } from "./compDetHero.jsx/Detail"
+
+export function HerosView({heroDetailData}) {
+    const { selectHero, data2, heroSelected } = useContext(Context)
     const { filterHeros, handleImageError } = UseFilters()
 
 
@@ -39,7 +41,8 @@ export function HerosView() {
                     className={'int-view'}
                 />
             </div>
-            <DetailHero />
+            <Detail heroDetail={heroDetailData} 
+                    heroSelected={heroSelected}/>
         </div>
     )
 }

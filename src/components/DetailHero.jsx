@@ -1,3 +1,4 @@
+//SIN USAR
 import { useContext, useEffect, useState } from "react"
 import { Context } from "../context/context"
 import { useSearch } from "../hooks/useSearch"
@@ -6,7 +7,6 @@ import './Detail.css'
 import { FormSearch } from "./compDetailHeros/FormSearch"
 import { Presentation } from "./compDetailHeros/Presentation"
 import { HeroData } from "./compDetailHeros/HeroData"
-
 export function DetailHero() {
     const { heroSelected } = useContext(Context)
     const { heroHover } = useSearch()

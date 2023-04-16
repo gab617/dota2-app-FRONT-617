@@ -1,22 +1,22 @@
 import { createContext, useEffect, useState } from 'react'
 import {dataHeros2} from '../mocks/dataHeros2.json'
+import dataWarlock from '../mocks/dataWarlock.json' //Para prueba.
 
 export const Context = createContext({})
 
 export function ContextProvider({ children }) {
-    
     const [data2,setData] = useState([])
     const [heroSelected, setHeroSelected] = useState({})
     const [heroHover, setHeroHover] = useState('')
 
-    function handleOver (hero){
+    function handleOver (hero){ //funcion para manejar el hover en el formulario luego de la busqueda
         const {name_loc} = hero
         console.log(name_loc,'asdasd')
         const newHoverHero = hero.name_loc
         console.log(newHoverHero)
         setHeroHover(newHoverHero)
     }
-    function handleOffOver(){
+    function handleOffOver(){//luego que se termina el hover en el componente buscado se borra la descripcion del personaje.
         setHeroHover('')
     }
 
@@ -26,11 +26,6 @@ export function ContextProvider({ children }) {
         const newHero = hero
         setHeroSelected(newHero)
     }
-
-    const [filtersHeroContext, setFiltersHero] = useState({
-        primary_attr: ''
-    })
-
 
     //Llamada a api en ves de usar mocks.
     //Asigna todos los datos de todos los heroes, 
@@ -45,23 +40,21 @@ export function ContextProvider({ children }) {
             setHeroSelected(json.dataHeros2[0])
         })
         .catch(err =>{
-            setData(dataHeros2)
+/*          setData(dataHeros2)
             setHeroSelected(dataHeros2[0])
-            console.clear()
+            console.clear() */
             console.log('ERROR EN SERVIDOR, SOLICIANDO DATOS GUARDADOS')
-
         })
-
     },[])
 
     return (
         <Context.Provider value={{
             data2,
-            filtersHeroContext,
             heroSelected,
             selectHero,
             searchHero,
-            heroHover, handleOver, handleOffOver
+            heroHover, handleOver, handleOffOver,
+            dataWarlock
         }}>
             {children}
         </Context.Provider>
