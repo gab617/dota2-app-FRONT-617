@@ -31,14 +31,15 @@ export function Detail({ heroDetail, heroSelected }) {
                 </div>
                 <h1>{hero?.name_loc}</h1>
                 <div>
-                    <ul>
+                    <ul className='abilities'>
                         {
                             hero?.abilities?.map((ability) => (
                                 <li key={ability.id}>
-                                    <h3>{ability.name_loc}</h3>                                    
                                     <section className="abilities-desc">
                                         <img src={ability.thumb_image} alt="img ability" />
-                                        <p>{ability.desc_loc}</p>
+                                       {/*  <p>{ability.desc_loc}</p> */}
+                                        <h3>{ability.name_loc}</h3>                                    
+
                                     </section>
                                 </li>
                             ))
