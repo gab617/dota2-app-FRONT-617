@@ -1,60 +1,66 @@
 import { createContext, useEffect, useState } from 'react'
-import {dataHeros2} from '../mocks/dataHeros2.json'
-import dataWarlock from '../mocks/dataWarlock.json' //Para prueba.
 
 export const Context = createContext({})
 
 export function ContextProvider({ children }) {
-    const [data2,setData] = useState([])
-    const [heroSelected, setHeroSelected] = useState({})
+    const [listHeros, setListHeros] = useState([]) //Listado de heroes (datos basicos para armar el listado)
+    const [heroSelected, setHeroSelected] = useState({})// Heroe que se selecciona en la lista (click)
+    const [heroDetailSelected, setHeroDetailSelected] = useState({})// Datos de heroe detallado.
+
     const [heroHover, setHeroHover] = useState('')
 
-    function handleOver (hero){ //funcion para manejar el hover en el formulario luego de la busqueda
-        const {name_loc} = hero
-        console.log(name_loc,'asdasd')
+
+    function handleOver(hero) { //funcion para manejar el hover en el formulario luego de la busqueda
+        const { name_loc } = hero
+        console.log(name_loc, 'asdasd')
         const newHoverHero = hero.name_loc
         console.log(newHoverHero)
         setHeroHover(newHoverHero)
     }
-    function handleOffOver(){//luego que se termina el hover en el componente buscado se borra la descripcion del personaje.
+    function handleOffOver() {//luego que se termina el hover en el componente buscado se borra la descripcion del personaje.
         setHeroHover('')
     }
 
-    const [searchHero, setSearchHero] = useState('')
     //Al hacer click desde HerosView se asigna el nuevo heroe clickeado
     const selectHero = (hero) => {
         const newHero = hero
         setHeroSelected(newHero)
     }
 
-    //Llamada a api en ves de usar mocks.
+    //Funcion que le pide al servidor el dato del heroe mediante id,
+    //Datos del herore al detalle.
+    async function getDetailApi(){
+        const detailHero = await fetch(`http://localhost:3001/api/dota2/${heroSelected.id}`)
+        const json = await detailHero.json()
+        setHeroDetailSelected(json)
+        return json
+    }
+
+    //Llamada a servidor.
     //Asigna todos los datos de todos los heroes, 
     //Asigna heroe por defecto seleccionado, el primero de la lista
-    //Si no hay respues del sevidor, se le asigna el 'mock'
-    useEffect(()=>{
+    useEffect(() => {
         fetch('http://localhost:3001/api/dota2')
-        .then(response => response.json())
-        .then(json => {
-            console.log(json.dataHeros2)
-            setData(json.dataHeros2)
-            setHeroSelected(json.dataHeros2[0])
-        })
-        .catch(err =>{
-/*          setData(dataHeros2)
-            setHeroSelected(dataHeros2[0])
-            console.clear() */
-            console.log('ERROR EN SERVIDOR, SOLICIANDO DATOS GUARDADOS')
-        })
-    },[])
+            .then(response => response.json())
+            .then(json => {
+                setListHeros(json.listHeros) // Lista que se usa para dibujar todo el listado, pedido a la api
+                setHeroSelected(json.listHeros[0])// Asignacion de primer elemento
+            })
+            .catch(err => {
+                console.log('ERROR EN SERVIDOR, SOLICIANDO DATOS GUARDADOS(no hay)')
+            })
+    }, [])
+    
+
 
     return (
         <Context.Provider value={{
-            data2,
-            heroSelected,
-            selectHero,
-            searchHero,
-            heroHover, handleOver, handleOffOver,
-            dataWarlock
+            listHeros, // Lista que reenderiza todos los heroes en forma de cartas
+            heroSelected, // Variable que guarda los datos del heroe seleccionado para mostrar en detalle, por defecto se seleccion el anti-mage por ser el primero de la lista
+            selectHero, // Funcion que asigna el heroe clickeado en la lista para detallar.
+            heroDetailSelected, // Seleccion mediante servidor, el detalle del heroe clickado.
+            getDetailApi, //Funcion que pide alserv, el detalle del heroe clickeado
+            heroHover, handleOver, handleOffOver //sin uso por ahora
         }}>
             {children}
         </Context.Provider>
