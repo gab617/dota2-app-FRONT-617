@@ -6,6 +6,7 @@ export function ContextProvider({ children }) {
     const [listHeros, setListHeros] = useState([]) //Listado de heroes (datos basicos para armar el listado)
     const [heroSelected, setHeroSelected] = useState({})// Heroe que se selecciona en la lista (click)
     const [heroDetailSelected, setHeroDetailSelected] = useState({})// Datos de heroe detallado.
+    
 
     const [heroHover, setHeroHover] = useState('')
 
@@ -44,9 +45,10 @@ export function ContextProvider({ children }) {
             .then(response => response.json())
             .then(json => {
                 setListHeros(json.listHeros) // Lista que se usa para dibujar todo el listado, pedido a la api
-                setHeroSelected(json.listHeros[0])// Asignacion de primer elemento
+               /*  setHeroSelected(json.listHeros[0]) */// Asignacion de primer elemento
             })
             .catch(err => {
+                
                 console.log('ERROR EN SERVIDOR, SOLICIANDO DATOS GUARDADOS(no hay)')
             })
     }, [])

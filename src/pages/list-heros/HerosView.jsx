@@ -1,6 +1,6 @@
 import { useContext } from "react"
-import { Context } from "../context/context"
-import { UseFilters } from "../hooks/useFilters"
+import { Context } from "../../context/context"
+import { UseFilters } from "../../hooks/useFilters"
 import './HerosView.css'
 import { ListHerosSection } from "./ListHerosSection"
 
