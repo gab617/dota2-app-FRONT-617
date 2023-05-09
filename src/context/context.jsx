@@ -31,7 +31,7 @@ export function ContextProvider({ children }) {
     //Funcion que le pide al servidor el dato del heroe mediante id,
     //Datos del herore al detalle.
     async function getDetailApi(){
-        const detailHero = await fetch(`http://localhost:3001/api/dota2/${heroSelected.id}`)
+        const detailHero = await fetch(`https://dota2-6174.onrender.com/api/dota2/${heroSelected.id}`)
         const json = await detailHero.json()
         setHeroDetailSelected(json)
         return json
@@ -41,7 +41,7 @@ export function ContextProvider({ children }) {
     //Asigna todos los datos de todos los heroes, 
     //Asigna heroe por defecto seleccionado, el primero de la lista
     useEffect(() => {
-        fetch('http://localhost:3001/api/dota2')
+        fetch('https://dota2-6174.onrender.com/api/dota2')
             .then(response => response.json())
             .then(json => {
                 setListHeros(json.listHeros) // Lista que se usa para dibujar todo el listado, pedido a la api
