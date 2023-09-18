@@ -57,6 +57,10 @@ export function PageDetail() {
         setShowHoverAbilitie(false)
     }
 
+    /* CADA VEZ QUE SE CLICKEE EN UN PERSONAJE, heroSelected Cambiara de id, lo cual hara una 
+    peticion a la api con ese id, desde getDetailApi, la cual usa el nuevo valor de heroSelected
+    para pedir los datos a la api y asi poder renderizar nuevamente todo el componente PageDetail
+    con los datos nuevos. */
     useEffect(() => {
         setLoading(true)
         getDetailApi().then(res => {
@@ -67,7 +71,7 @@ export function PageDetail() {
     if (loading) return <div className="loader"></div>
 
     return (
-        <>
+        <div className='fade-in'>
             <div className='contenedor-botones'>
                 <ButtonNavigation
                     handleClick={handleClickFormer}
@@ -98,7 +102,7 @@ export function PageDetail() {
                     heroDetailSelected={heroDetailSelected}
                 />
             </div>
-        </>
+        </div>
     )
 
 }

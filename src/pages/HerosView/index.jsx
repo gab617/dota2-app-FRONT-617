@@ -13,11 +13,12 @@ export function HerosView() {
     const filteredHerosInt = filterHeros(listHeros, 2) //Inteligencia
 
     function handleClick(hero) {
+        console.log(hero,'ASD')
         selectHero(hero)
     }
 
     return (
-        <div className="list-heroes">
+        <div className="list-heroes fade-in">
             <ListHerosSection
                 filteredHeros={filteredHerosStr}
                 handleImageError={handleImageError}

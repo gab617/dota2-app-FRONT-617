@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from 'react'
+import { navigate } from 'wouter/use-location'
 
 export const Context = createContext({})
 
@@ -8,23 +9,11 @@ export function ContextProvider({ children }) {
     const [heroDetailSelected, setHeroDetailSelected] = useState({})// Datos de heroe detallado.
     
 
-    const [heroHover, setHeroHover] = useState('')
-
-
-    function handleOver(hero) { //funcion para manejar el hover en el formulario luego de la busqueda
-        const { name_loc } = hero
-        console.log(name_loc, 'asdasd')
-        const newHoverHero = hero.name_loc
-        console.log(newHoverHero)
-        setHeroHover(newHoverHero)
-    }
-    function handleOffOver() {//luego que se termina el hover en el componente buscado se borra la descripcion del personaje.
-        setHeroHover('')
-    }
-
     //Al hacer click desde HerosView se asigna el nuevo heroe clickeado
+    //Llega desde el hook
     const selectHero = (hero) => {
         const newHero = hero
+        navigate("/det")
         setHeroSelected(newHero)
     }
 
@@ -62,7 +51,6 @@ export function ContextProvider({ children }) {
             selectHero, // Funcion que asigna el heroe clickeado en la lista para detallar.
             heroDetailSelected, // Seleccion mediante servidor, el detalle del heroe clickado.
             getDetailApi, //Funcion que pide alserv, el detalle del heroe clickeado
-            heroHover, handleOver, handleOffOver //sin uso por ahora
         }}>
             {children}
         </Context.Provider>

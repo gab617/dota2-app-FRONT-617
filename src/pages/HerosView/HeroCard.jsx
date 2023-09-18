@@ -16,7 +16,7 @@ export function HeroCard({ hero, handleClick, defectUrlImg, handleImageError }) 
                     onError={handleImageError}        
                 />
                 <div>
-                    <h1>{hero.name_loc} // {hero.id}</h1>
+                    <h1>{hero.name_loc}</h1>
                     {/* <img src={hero.attribute_img} alt="" /> */}
 
                 </div>

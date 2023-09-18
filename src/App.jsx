@@ -1,23 +1,45 @@
 import React, { useContext, useState } from "react";
-import { HerosView } from "./pages/list-heros/HerosView";
-import { PageDetail } from "./pages/detail/PageDetail";
-export function App() {
+import { Link, Route, Router } from "wouter"
 
+
+
+import { HerosView } from "./pages/HerosView"
+import { PageDetail } from "./pages/Detail"
+
+const Components = () => {
+    return (
+        <>
+            <PageDetail></PageDetail>
+            <HerosView></HerosView>
+        </>
+    )
+}
+
+export function App() {
     return (
 
         <div className="App">
             <div>
                 <nav>
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Heroes</a></li>
-                        <li><a href="">hi!</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><Link href="">Home</Link></li>
+                        <li><Link href="heroes">Heroes</Link></li>
+                        <li><Link href="">hi!</Link></li>
+                        <li><Link href="">Contact</Link></li>
                     </ul>
                 </nav>
             </div>
-            <PageDetail />
-            <HerosView className="principal" />
+
+            <Route
+                component={HerosView}
+                path='/heroes'
+            />
+
+            <Route
+                component={PageDetail}
+                path='/det'
+            />
+
         </div>
     )
 
