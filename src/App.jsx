@@ -6,14 +6,15 @@ import { Link, Route, Router } from "wouter"
 import { HerosView } from "./pages/HerosView"
 import { PageDetail } from "./pages/Detail"
 
-const Components = () => {
+/* const Components = () => {
     return (
         <>
             <PageDetail></PageDetail>
             <HerosView></HerosView>
         </>
     )
-}
+    
+} */
 
 export function App() {
     return (
