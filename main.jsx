@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { App } from './src/App'
+import { App } from './src/index'
 import { ContextProvider } from './src/context/context'
 
 const root = createRoot(document.getElementById('app'))
