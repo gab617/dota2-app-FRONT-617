@@ -18,12 +18,13 @@ import { PageDetail } from "./pages/PageDetail"
 
 export function App() {
     return (
+
         <div className="App">
             <div>
                 <nav>
                     <ul>
                         <li><Link href="">Home</Link></li>
-                        <li><Link href="heroes">Heroes</Link></li>
+                        <li><Link href="/">Heroes</Link></li>
                         <li><Link href="">hi!</Link></li>
                         <li><Link href="">Contact</Link></li>
                     </ul>
@@ -32,7 +33,7 @@ export function App() {
 
             <Route
                 component={HerosView}
-                path='/heroes'
+                path='/'
             />
 
             <Route
