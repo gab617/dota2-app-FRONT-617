@@ -4,7 +4,7 @@ import { Link, Route, Router } from "wouter"
 
 
 import { HerosView } from "./pages/HerosView"
-import { PageDetail } from "./pages/Detail"
+import { PageDetail } from "./pages/PageDetail"
 
 /* const Components = () => {
     return (
