@@ -5,6 +5,7 @@ import { Link, Route, Router } from "wouter"
 
 import { HerosView } from "./pages/HerosView"
 import { PageDetail } from "./pages/PageDetail"
+import { Home } from "./pages/Home";
 
 /* const Components = () => {
     return (
@@ -20,10 +21,10 @@ export function App() {
     return (
 
         <div className="App">
-            <div>
+            <div id='Nav'>
                 <nav>
                     <ul>
-                        <li><Link href="">Home</Link></li>
+                        <li><Link href="/home">Home</Link></li>
                         <li><Link href="/">Heroes</Link></li>
                         <li><Link href="">hi!</Link></li>
                         <li><Link href="">Contact</Link></li>
@@ -39,6 +40,11 @@ export function App() {
             <Route
                 component={PageDetail}
                 path='/det'
+            />
+
+            <Route
+                component={Home}
+                path='/home'
             />
 
         </div>

@@ -1,19 +1,21 @@
-.list-heroes{
+.list-heroes {
     margin-top: 30px;
-    background: linear-gradient(to left,  rgba(6, 6, 162, 0.37), rgba(9, 100, 218, 0.792));
-    width: 100%; /* si se agregara nuevamente la barra al costado para el detalle del heroe, el porcentaje que ocupaba era 70-30 */
+    background: linear-gradient(to left, rgba(6, 6, 162, 0.37), rgba(9, 100, 218, 0.792));
+    width: 100%;
+    /* si se agregara nuevamente la barra al costado para el detalle del heroe, el porcentaje que ocupaba era 70-30 */
     height: auto;
     padding: 5px;
+
+
 }
 
 .list-heroes ul {
     display: grid;
     grid-template-columns: repeat(auto-fit,
             minmax(80px, 1fr));
-    width: auto;      
-    height: auto;  
+    width: auto;
+    height: auto;
     padding: 0px;
-    margin-right: 15px;
 }
 
 .list-heroes li {
@@ -22,16 +24,25 @@
     padding: 0px;
 }
 
+.list-heroes .img-atrib{
+    margin: 1.4em;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+}
 
 
-.str-view{
+.str-view {
     background: linear-gradient(to right, rgba(202, 32, 2, 0.701), rgb(179, 104, 56));
 }
-.agi-view{
+
+.agi-view {
     background: linear-gradient(to right, rgba(129, 202, 2, 0.783), rgb(96, 150, 35));
 }
-.int-view{
+
+.int-view {
     background: linear-gradient(to right, rgba(6, 48, 74, 0.693), rgb(56, 179, 175));
-    
 }
 
+.uni-view {
+    background: linear-gradient(to right, rgba(68, 6, 74, 0.693), rgb(156, 2, 66));
+
+}
