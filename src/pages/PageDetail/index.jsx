@@ -68,7 +68,13 @@ export function PageDetail() {
             setLoading(false)
         })
     }, [heroSelected])
-    if (loading) return <div className="loader"></div>
+    if (loading) return (
+        <div className='loader-cont'>
+            <div className="loader"></div>
+            <h1>Despertando al servidor...</h1>
+            <p>La primer carga puede tardar un poquito...</p>
+        </div>
+    )
 
     return (
         <div className='fade-in'>
