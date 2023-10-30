@@ -1,6 +1,6 @@
 .list-heroes {
     margin-top: 30px;
-    background: linear-gradient(to left, rgba(6, 6, 162, 0.37), rgba(9, 100, 218, 0.792));
+    background: linear-gradient(to left, rgba(6, 6, 162, 0.37), rgba(9, 100, 218, 0.582));
     width: 100%;
     /* si se agregara nuevamente la barra al costado para el detalle del heroe, el porcentaje que ocupaba era 70-30 */
     height: auto;
@@ -31,18 +31,18 @@
 
 
 .str-view {
-    background: linear-gradient(to right, rgba(202, 32, 2, 0.701), rgb(179, 104, 56));
+    background: linear-gradient(to right, rgba(202, 32, 2, 0.701), rgba(68, 28, 3, 0.603));
 }
 
 .agi-view {
-    background: linear-gradient(to right, rgba(129, 202, 2, 0.783), rgb(96, 150, 35));
+    background: linear-gradient(to right, rgba(129, 202, 2, 0.783), rgba(96, 150, 35, 0.397));
 }
 
 .int-view {
-    background: linear-gradient(to right, rgba(6, 48, 74, 0.693), rgb(56, 179, 175));
+    background: linear-gradient(to right, rgba(6, 48, 74, 0.693), rgba(56, 179, 175, 0.527));
 }
 
 .uni-view {
-    background: linear-gradient(to right, rgba(68, 6, 74, 0.693), rgb(156, 2, 66));
+    background: linear-gradient(to right, rgba(68, 6, 74, 0.693), rgba(156, 2, 66, 0.575));
 
 }

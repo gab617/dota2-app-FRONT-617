@@ -1,20 +1,20 @@
 
 .HeroCard {
     transition: 0.2s;
-    background-color: rgba(245, 245, 245, 0.545);
+    background-color: rgba(79, 43, 240, 0.545);
     height: 90px;
     margin-bottom:8px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    border: 2px solid rgba(57, 29, 150, 0.326);
+    border: 2px solid rgba(60, 17, 202, 0.326);
     box-shadow: 0 0 25px rgba(0, 34, 255, 0.298);
-
+    color: rgb(19, 17, 19);
 }
 
 .HeroCard:hover{
     scale: 1.2;
-    background:linear-gradient(35deg, brown, pink, green);
+    background:linear-gradient(35deg, brown, pink, rgb(0, 128, 0));
     background-position: 0 0;
     transition: 0.5s;
     background-color: #333;

@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to right, rgba(10, 10, 220, 0.821), pink);
+    background: linear-gradient(to right, rgba(10, 10, 220, 0.821), rgb(2, 27, 97));
 
 }
 
@@ -34,7 +34,7 @@ body {
     border-radius: 1em;
     text-decoration: none;
     /* Elimina el subrayado de los enlaces */
-    color: #040400;
+    color: #eeeeee;
     /* Color de texto dorado */
     font-family: 'Times New Roman', serif;
     /* Fuente estilo antiguo */
@@ -95,7 +95,7 @@ body {
 }
 
 
-/* Agrega estas clases CSS en tu archivo de estilos */
+
 .fade-in {
     opacity: 0;
     /* Empieza con opacidad 0 para ocultar el componente */
