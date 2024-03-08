@@ -13,12 +13,12 @@ body {
 /* Estilos para el menú de navegación estilo medieval */
 #Nav nav {
     background-color: #081a50bd;
-    padding: 10px;
+    padding: 8px;
     text-align: center;
     width: 70%;
     margin: 0 auto; /* Centra el menú horizontalmente */
-    border-radius: 10px;
-    margin-bottom: 1em;
+    border-radius: .5em;
+    margin-bottom: .4em;
 }
 
 #Nav ul {
@@ -66,40 +66,11 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-top: 2em;
+    color: white;
 }
 
-.loader {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    animation: spin 1.2s linear infinite;
-    color: black;
-}
 
-.loader::before,
-.loader::after {
-    content: '';
-    position: absolute;
-    border-radius: inherit;
-}
-
-.loader::before {
-    width: 100%;
-    height: 100%;
-    background-image:
-        linear-gradient(0deg, #f0c 0%, #80f 100%);
-}
-
-.loader::after {
-    width: 85%;
-    height: 85%;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
 
 
 
@@ -116,3 +87,37 @@ body {
         /* Llega a una opacidad de 1 para mostrar el componente */
     }
 }
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    height: 15px;
+    aspect-ratio: 4;
+    --_g: no-repeat radial-gradient(farthest-side,#000 90%,#0000);
+    background: 
+      var(--_g) left, 
+      var(--_g) right;
+    background-size: 25% 100%;
+    display: grid;
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    height: inherit;
+    aspect-ratio: 1;
+    grid-area: 1/1;
+    margin: auto;
+    border-radius: 50%;
+    transform-origin: -100% 50%;
+    background: #000;
+    animation: l49 1s infinite linear;
+  }
+  .loader:after {
+    transform-origin: 200% 50%;
+    --s:-1;
+    animation-delay: -.5s;
+  }
+  
+  @keyframes l49 {
+    58%,
+    100% {transform: rotate(calc(var(--s,1)*1turn))}
+  }

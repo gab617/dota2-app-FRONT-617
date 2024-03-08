@@ -71,8 +71,7 @@ export function PageDetail() {
     if (loading) return (
         <div className='loader-cont'>
             <div className="loader"></div>
-            <h1>Despertando al servidor...</h1>
-            <p>La primer carga puede tardar un poquito...</p>
+            <h1>Solicitando datos del Heroe</h1>
         </div>
     )
 
@@ -108,6 +107,7 @@ export function PageDetail() {
                     heroDetailSelected={heroDetailSelected}
                 />
             </div>
+            <p className='story'>{heroDetailSelected.bio_loc}</p>
         </div>
     )
 

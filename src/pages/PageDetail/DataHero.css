@@ -1,0 +1,35 @@
+#DataHeroDetail #atrib{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.388);
+    padding: 1.3em;
+    align-items: center;
+}
+
+
+#atr-princ-img{
+    width: 100%;
+    display: flex;
+}
+
+#atr-princ-img img{
+    margin: 0 auto;
+    width: 60%;
+}
+
+#stats{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.class-stat{
+    display: flex;
+}
+
+
+
+.class-stat p{
+    margin-left: .8em;
+}
