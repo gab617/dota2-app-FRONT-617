@@ -4,6 +4,7 @@ import { HeroCard } from "./HeroCard";
 export function ListHerosSection({ filteredHeros, handleClick, handleImageError, className, nameSection,imgUrl }) {
     return (
         <>
+            <img className="img-atrib" src={imgUrl} alt="" />
             <ul className={className} >
                 {
                     filteredHeros.map((hero) => (
@@ -16,7 +17,6 @@ export function ListHerosSection({ filteredHeros, handleClick, handleImageError,
                         </li>
                     ))
                 }
-                <img className="img-atrib" src={imgUrl} alt="" />
             </ul>
         </>
     )

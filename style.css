@@ -1,5 +1,12 @@
 body {
-    background: linear-gradient(to right, rgba(10, 10, 220, 0.821), rgb(2, 27, 97));
+    background-image: url("/fondonuevo2.png");
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Hace que la imagen cubra todo el espacio disponible */
+    aspect-ratio: auto;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+
 
 }
 
