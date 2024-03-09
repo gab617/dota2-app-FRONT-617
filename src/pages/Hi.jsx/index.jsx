@@ -11,10 +11,10 @@ export default function Hi() {
                     <p>Al adentrarte en el mundo de Dota 2, el siguiente paso crucial es enfocarte en la comprensión de las mecánicas fundamentales y la diversidad de héroes. Primero, domina los conceptos básicos: el "last hitting" (golpear para dar el último golpe a los enemigos y obtener oro), la importancia de la visión del mapa para detectar movimientos enemigos, y el rol de los objetos en la ampliación de las capacidades de tu héroe. Explora y especialízate en algunos héroes para entender sus fortalezas y debilidades dentro del vasto elenco disponible. La comunicación y estrategia en equipo son esenciales; aprender a coordinar con tus compañeros puede cambiar el curso de una partida. Finalmente, adopta una mentalidad de aprendizaje continuo: revisa tus partidas, aprende de tus errores y éxitos, y mantente al tanto de las estrategias emergentes. </p>
                 </div>
 
-                <img src="public/heroswall.png" alt="" />
+                <img src="/heroswall.png" alt="" />
             </div>
             <div id="maps">
-                <img src="public/d2map1.jpg" alt="" />
+                <img src="/d2map1.jpg" alt="" />
                 <ul id="ul-hi">
                     <li>Radiant y Dire: El mapa está dividido en dos lados simétricos: Radiant y Dire.</li>
 
@@ -34,7 +34,7 @@ export default function Hi() {
                 </ul>
 
                 <div id="Heroe-hi">
-                    <img src="public/lanaya.png" alt="" />
+                    <img src="/lanaya.png" alt="" />
 
                     <p>
                         En "Dota 2", los héroes son los personajes controlados por los jugadores, cada uno con habilidades únicas y roles específicos que influyen en la estrategia y el resultado de la partida. Se dividen principalmente en tres categorías basadas en sus fortalezas y estilos de juego: <br /><br />
