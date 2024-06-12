@@ -14,11 +14,11 @@
     width: 100%;
 }
 
-#NameCard{
-}
+
 
 .HeroCard h1 {
-    font-size: 1em;  
+    font-size: 1.2em;  
+    margin-left: .3em;
     
 }
 

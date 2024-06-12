@@ -4,6 +4,7 @@ import dataHerosEdit from "../mocks/dataHerosEdit.json"
 
 export const Context = createContext({})
 
+
 export function ContextProvider({ children }) {
     const [listHeros, setListHeros] = useState([]) //Listado de heroes (datos basicos para armar el listado)
     const [heroSelected, setHeroSelected] = useState({})// Heroe que se selecciona en la lista (click)

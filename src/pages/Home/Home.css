@@ -5,25 +5,15 @@
     padding: 0;
     background: url("/public/fondoHome.jpg");
     background-size: cover;
-    /* Cubrir todo el contenedor */
     background-repeat: no-repeat;
-    /* Evitar la repetición de la imagen */
     background-attachment: fixed;
-    /* Fijar la imagen al fondo */
-    /* Otras propiedades de estilo según tus preferencias */
     font-family: Arial, sans-serif;
     color: #ffffff;
-    /* Color del texto en el fondo */
     display: flex;
-    /* Usar flexbox */
     flex-direction: column;
-    /* Opcional: si quieres que los elementos dentro se apilen verticalmente */
     justify-content: stretch;
-    /* Hace que el componente ocupe todo el espacio vertical disponible */
     align-items: stretch;
-    /* Hace que el componente ocupe todo el espacio horizontal disponible */
     height: 100vh;
-    /* Ocupar toda la altura de la ventana */
 }
 
 
@@ -54,33 +44,6 @@
     transition: background-color 0.3s ease-in-out;
 }
 
-#Home article {
-    width: 100%;
-    /* Ocupar todo el ancho del contenedor */
-    height: 100%;
-    /* Ocupar toda la altura del contenedor */
-
-}
-
-
-
-#Home h1 {
-    -webkit-text-stroke: 1px black;
-    /* Rodeo alrededor del texto */
-    color: white;
-    /* Color del texto */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-    /* Sombra de texto */
-}
-
-#Home p {
-    -webkit-text-stroke: 0.2px black;
-    /* Rodeo alrededor del texto */
-    color: white;
-    /* Color del texto */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-    /* Sombra de texto */
-}
 
 main {
     display: flex;

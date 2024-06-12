@@ -15,7 +15,6 @@ export function PageDetail() {
 
     const { heroSelected, getDetailApi, heroDetailSelected } = useDetail()
     const [loading, setLoading] = useState(false)
-    const [showHoverAbilitie, setShowHoverAbilitie] = useState(false)
 
     //Busca desde el index en listHeros del heroe seleccionado para detalle,
     //Compara cada id del heroe en listHeros con el heroe seleccionado
@@ -46,15 +45,6 @@ export function PageDetail() {
             return
         }
         console.log(indexCurrentHero, 'Siguiente')
-    }
-
-    function handleMouseEnter() {
-        console.log('enter')
-        setShowHoverAbilitie(true)
-    }
-    function handleMouseLeave() {
-        console.log('leave')
-        setShowHoverAbilitie(false)
     }
 
     /* CADA VEZ QUE SE CLICKEE EN UN PERSONAJE, heroSelected Cambiara de id, lo cual hara una 
@@ -96,16 +86,24 @@ export function PageDetail() {
                     <DataHero
                         heroDetailSelected={heroDetailSelected}
                     />
+
                     <ListAbilities
                         heroDetailSelected={heroDetailSelected}
-                        handleMouseEnter={handleMouseEnter}
-                        handleMouseLeave={handleMouseLeave}
                     />
                 </div>
-
                 <PictureDetail
                     heroDetailSelected={heroDetailSelected}
                 />
+                <div>
+                    <h1>COMPLEJIDAD</h1>
+                    <div className='flex w-full justify-center gap-2 text-3xl'>
+                        {
+                            Array.from({ length: heroDetailSelected.complexity }, (_, index) => (
+                                <span key={index}>{'★'}</span>
+                            ))
+                        }
+                    </div>
+                </div>
             </div>
             <p className='story'>{heroDetailSelected.bio_loc}</p>
         </div>

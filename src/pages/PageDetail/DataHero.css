@@ -5,6 +5,7 @@
     background-color: rgba(0, 0, 0, 0.388);
     padding: 1.3em;
     align-items: center;
+    margin-bottom: 3em;
 }
 
 
@@ -15,7 +16,7 @@
 
 #atr-princ-img img{
     margin: 0 auto;
-    width: 60%;
+    width: 90%;
 }
 
 #stats{

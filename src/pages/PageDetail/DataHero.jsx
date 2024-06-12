@@ -33,14 +33,18 @@ export function DataHero({ heroDetailSelected }) {
 
     return (
         <div id="DataHeroDetail">
-            <h1>{heroDetailSelected?.name_loc}</h1>
+            <h1 className="text-7xl mb-10 mt-5">{heroDetailSelected?.name_loc}</h1>
             {/* <p>{heroDetailSelected.bio_loc}</p> */}
             <div id="atrib">
                 <div>
                     <div id="atr-princ-img">
                         <img src={data.urlAtr} alt="" />
                     </div>
-                    <h2>{data.nameAtt}</h2>
+                    <h2 className="text-xl">{data.nameAtt}</h2>
+                </div>
+                <div>
+                    <h2 className="text-2xl">Tipo de ataque:</h2>
+                    <h2 className="text-2xl">{heroDetailSelected.attack_capability == 1 ? 'Melee' : 'Rango'}</h2>
                 </div>
 
                 <div>

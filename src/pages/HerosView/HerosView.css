@@ -14,6 +14,7 @@
     width: auto;
     height: auto;
     padding: 0;
+    margin: .9em;
 }
 
 .list-heroes ul li:hover{
@@ -21,11 +22,10 @@
     background:linear-gradient(35deg, brown, pink, rgb(0, 128, 0));
     transition: 0.5s;
     background-color: #333;
-    color: #ddd;
+    color: #ffffff;
     box-shadow: 0 0 55px rgba(232, 249, 0, 0.685);
     border-radius: 6px;
 }
-
 
 .list-heroes li {
     list-style: none;
@@ -36,6 +36,7 @@
     align-items: center;
     display: flex;    
     margin: 0 auto;
+    cursor: pointer;
 }
 
 

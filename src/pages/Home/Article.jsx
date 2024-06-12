@@ -12,8 +12,8 @@ export function Article({ url, title, urlFondo, proximamente }) {
     return (
         <>
             <a href={url} style={fondo} target="_blank">
-                <article>
-                    <h2>{title}</h2>
+                <article className="h-20">
+                    <h2 className="text-2xl mt-3">{title}</h2>
                 </article>
             </a>
 

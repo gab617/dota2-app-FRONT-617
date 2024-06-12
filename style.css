@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
     background-image: url("/fondonuevo2.png");
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -13,7 +17,7 @@ body {
 /* Estilos para el menú de navegación estilo medieval */
 #Nav nav {
     background-image: url("./public/navimgage.png");
-    padding: 8px;
+    padding: 2px;
     text-align: center;
     width: 70%;
     margin: 0 auto; /* Centra el menú horizontalmente */

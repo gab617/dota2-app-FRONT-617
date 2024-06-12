@@ -3,8 +3,8 @@ import { Ability } from "../../components/Ability";
 export function ListAbilities({ heroDetailSelected, handleMouseEnter, handleMouseLeave }) {
     return (
         <div className='list-abilities'>
-        
-            <h2>Habilidades</h2>
+
+            <h2 className="text-2xl">Habilidades</h2>
             <ul>
                 {
                     heroDetailSelected?.abilities?.map((ability) => (
@@ -20,6 +20,7 @@ export function ListAbilities({ heroDetailSelected, handleMouseEnter, handleMous
                     ))
                 }
             </ul>
+
         </div>
     )
 }
