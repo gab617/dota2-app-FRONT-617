@@ -1,117 +1,12 @@
-#Hi {
-    display: flex;
-    width: 95%;
-}
-
-#Hi .txt-hi h2{
-    font-size: 2em;
+.txt-hi h2{
+    padding: .3em;
     text-align: center;
-    color:white;
-    background-color: rgba(0, 0, 0, 0.637);
+    font-size: 1.2em;
+}
+
+.ul-game li{
     padding: .3em;
-    padding-top: .5em;
-
-    
-}
-
-#Hi .txt-hi p {
-    background-color: rgba(0, 0, 0, 0.637);
-    color: rgb(235, 227, 227);
-    padding: .6em;
-    font-size: 2em;
-    padding-bottom: 1.5em;
-    margin-bottom: .1em;
-}
-
-#desc-game {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-}
-
-#desc-game img {
-    width: 95%;
-    transition: 1s;
-
-}
-
-#desc-game img:hover {
-    scale: 1.5;
-    margin-left: 60%;
-    transition: 1s;
-    cursor: pointer;
-    background: rgb(252, 4, 101);
-    background: linear-gradient(90deg, rgba(252, 4, 101, 0.5130427170868348) 4%, rgba(242, 105, 0, 0.6222864145658263) 36%, rgba(255, 0, 236, 0.3785889355742297) 68%, rgba(255, 248, 0, 0.5046393557422969) 97%);
-    padding: .5em;
-    border-radius: .3em;
-
-
-}
-
-#desc-game .txt-hi {
-    width: 85%;
-    margin: 0 auto;
-}
-
-#maps {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-
-}
-
-#maps img {
-    aspect-ratio: auto;
-    width: 70%;
-    transition: .5s;
-    margin: 0 auto;
-    margin-top: 2.5em;
-
-}
-
-#maps img:hover {
-    box-shadow: 0 0em 1em 1em rgba(255, 255, 255, 0.23);
-    /* Definición del brillo */
-    transition: .5s;
-    scale: 1.1;
-    cursor: pointer;
-
-
-}
-
-#ul-hi {
-    padding: 2em;
-    background-color: rgba(0, 0, 0, 0.853);
-    color: rgb(235, 227, 227);
-
-
-}
-
-#ul-hi li {
-    padding: .3em;
-    font-size: 1.4em;
-}
-
-#Heroe-hi {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-#Heroe-hi img {
-    width: 50%;
-}
-
-@keyframes brillo-animation {
-    0% {}
-
-    100% {
-        box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0);
-        /* Definición del brillo */
-    }
+    background-color: rgba(0, 0, 0, 0.438);
+    margin-bottom: .2em;
+    margin-top: .2em;
 }

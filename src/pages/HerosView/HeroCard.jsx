@@ -16,7 +16,12 @@ export function HeroCard({ hero, handleClick, defectUrlImg, handleImageError }) 
                     onError={handleImageError}        
                 />
                 <div id='NameCard'>
-                    <h1>{hero.name_loc}</h1>
+                    <h1 className='
+                        font-bold
+                        lg:ml-2
+                    '
+
+                    >{hero.name_loc}</h1>
                     {/* <img src={hero.attribute_img} alt="" /> */}
 
                 </div>

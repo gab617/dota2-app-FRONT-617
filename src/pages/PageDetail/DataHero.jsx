@@ -32,40 +32,41 @@ export function DataHero({ heroDetailSelected }) {
 
 
     return (
-        <div id="DataHeroDetail">
-            <h1 className="text-7xl mb-10 mt-5">{heroDetailSelected?.name_loc}</h1>
+        <div className="lg:mt-4 ">{/* DataHeroDetail */}
+            <div className="m-auto bg-black bg-opacity-70 text-white lg:bg-opacity-30">
+                <h1 className="w-full p-2 text-5xl text-center ">{heroDetailSelected?.name_loc}</h1>
+            </div>
             {/* <p>{heroDetailSelected.bio_loc}</p> */}
-            <div id="atrib">
-                <div>
-                    <div id="atr-princ-img">
+            <div className=" bg-black bg-opacity-70 text-white lg:rounded-xl lg:p-4 lg:bg-opacity-30"> {/* //atrib */}
+                <div className="flex flex-col justify-center items-center">
+                    <div className="">{/* atr-princ-img */}
                         <img src={data.urlAtr} alt="" />
                     </div>
-                    <h2 className="text-xl">{data.nameAtt}</h2>
+                    <h2 className="text-2xl">{data.nameAtt}</h2>
                 </div>
                 <div>
-                    <h2 className="text-2xl">Tipo de ataque:</h2>
-                    <h2 className="text-2xl">{heroDetailSelected.attack_capability == 1 ? 'Melee' : 'Rango'}</h2>
+                    <h2 className="text-2xl text-center">{heroDetailSelected.attack_capability == 1 ? 'Melee' : 'Rango'}</h2>
                 </div>
 
                 <div>
-                    <div id="stats">
-                        <div className="class-stat">
-                            <div>
-                                <img src={"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_strength.png"} alt="" />
+                    <div className="flex justify-center gap-5">{/* //stat */}
+                        <div className="">{/* class-stat */}
+                            <div className="">
+                                <img className="m-auto" src={"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_strength.png"} alt="" />
                             </div>
                             <p>{heroDetailSelected.str_base} + {heroDetailSelected.str_gain}</p>
                         </div>
 
-                        <div className="class-stat">
+                        <div className="">{/* class-stat */}
                             <div>
-                                <img src={"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png"} alt="" />
+                                <img className="m-auto" src={"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png"} alt="" />
                             </div>
                             <p>{heroDetailSelected.agi_base} + {heroDetailSelected.agi_gain}</p>
                         </div>
 
-                        <div className="class-stat">
+                        <div className="">{/* class-stat */}
                             <div>
-                                <img src={"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_intelligence.png"} alt="" />
+                                <img className="m-auto" src={"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_intelligence.png"} alt="" />
                             </div>
                             <p>{heroDetailSelected.int_base} + {heroDetailSelected.int_gain}</p>
                         </div>

@@ -19,7 +19,7 @@ export function HerosView() {
     }
 
     return (
-        <div className="list-heroes fade-in">
+        <div className="list-heroes fade-in lg:w-80">
             <ListHerosSection
                 filteredHeros={filteredHerosStr}
                 handleImageError={handleImageError}

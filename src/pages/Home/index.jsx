@@ -14,15 +14,27 @@ export function Home() {
 
     return (
 
-        <div id="Home" className="fade-in">
-            <div className="bg-black bg-opacity-70 text-xl w-full text-center p-4 mx-auto">
+        <div id="Home" className="fade-in lg:h-screen">
+            <div className="
+            bg-black 
+            bg-opacity-70 
+            text-xl 
+            w-full 
+            text-center 
+            p-4 
+            mx-auto">
                 <h1>Dota2 App {date}</h1>
                 <p>Esta aplicacion es en homenaje al conocido juego Dota2 representados sus heroes,
                     con sus respectivas caracteristicas para explorar.
                 </p>
             </div>
 
-            <div className="flex flex-wrap justify-center">
+            <div className="
+                flex 
+                flex-col 
+                lg:flex-row
+                flex-wrap 
+                justify-center">
                 <Article
                     url={"https://www.dota2.com/newsentry/3727347341067147995"}
                     title={"El circuito profesional de Dota"}

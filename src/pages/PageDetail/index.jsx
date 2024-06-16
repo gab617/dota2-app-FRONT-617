@@ -81,21 +81,35 @@ export function PageDetail() {
                 />
             </div>
 
-            <div className="pageDetail">
-                <div className='detail-data'>
-                    <DataHero
+            <div className="
+                flex 
+                flex-col 
+                mt-1 
+                bg-black 
+                bg-opacity-70 
+                text-white
+                xl:w-95
+                xl:m-auto
+                xl:rounded-xl
+                ">{/* pageDetail */}
+                <div className='lg:flex'>
+                    <PictureDetail
                         heroDetailSelected={heroDetailSelected}
                     />
+                    <div className='lg:flex lg:flex-col lg:justify-between xl:w-5/12'>{/* detail-data */}
+                        <DataHero
+                            heroDetailSelected={heroDetailSelected}
+                        />
 
-                    <ListAbilities
-                        heroDetailSelected={heroDetailSelected}
-                    />
+                        <ListAbilities
+                            heroDetailSelected={heroDetailSelected}
+                        />
+                    </div>
                 </div>
-                <PictureDetail
-                    heroDetailSelected={heroDetailSelected}
-                />
+
+
                 <div>
-                    <h1>COMPLEJIDAD</h1>
+                    <h1 className='text-center mt-2'>COMPLEJIDAD</h1>
                     <div className='flex w-full justify-center gap-2 text-3xl'>
                         {
                             Array.from({ length: heroDetailSelected.complexity }, (_, index) => (
@@ -105,7 +119,22 @@ export function PageDetail() {
                     </div>
                 </div>
             </div>
-            <p className='story'>{heroDetailSelected.bio_loc}</p>
+            <div className='            
+            bg-black 
+            bg-opacity-70 
+            text-white
+            xl:w-95
+            xl:m-auto
+            xl:rounded-xl'>
+                <p className='
+            w-95
+            m-auto
+            bg-opacity-70 
+            text-white'>{/*story*/}
+                    {heroDetailSelected.bio_loc}
+                </p>
+            </div>
+
         </div>
     )
 

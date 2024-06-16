@@ -1,4 +1,4 @@
-#DataHeroDetail #atrib{
+.DataHeroDetail .atrib{
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -9,17 +9,17 @@
 }
 
 
-#atr-princ-img{
+.atr-princ-img{
     width: 100%;
     display: flex;
 }
 
-#atr-princ-img img{
+.atr-princ-img img{
     margin: 0 auto;
     width: 90%;
 }
 
-#stats{
+.stats{
     display: flex;
     flex-direction: column;
 }

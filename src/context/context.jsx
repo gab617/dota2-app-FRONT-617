@@ -34,23 +34,27 @@ export function ContextProvider({ children }) {
 
     /* se me termino render :C 0 gb para usar el servidor */
     /* Estare usando los nuevos datos dataHerosEdit ya que se agrego nueva categoria para atributos*/
-/*          useEffect(() => {
-            fetch('https://dota2-6174.onrender.com/api/dota2')
-                .then(response => response.json())
-                .then(json => {
-                    setListHeros(json.listHeros) // Lista que se usa para dibujar todo el listado, pedido a la api
-                    setHeroSelected(json.listHeros[0])// Asignacion de primer elemento
-                })
-                .catch(err => {
-                    
-                    console.log('ERROR EN SERVIDOR, SOLICIANDO DATOS GUARDADOS(no hay)')
-                })
-        }, [])  */
+    /*          useEffect(() => {
+                fetch('https://dota2-6174.onrender.com/api/dota2')
+                    .then(response => response.json())
+                    .then(json => {
+                        setListHeros(json.listHeros) // Lista que se usa para dibujar todo el listado, pedido a la api
+                        setHeroSelected(json.listHeros[0])// Asignacion de primer elemento
+                    })
+                    .catch(err => {
+                        
+                        console.log('ERROR EN SERVIDOR, SOLICIANDO DATOS GUARDADOS(no hay)')
+                    })
+            }, [])  */
 
     /* Estaremos usando la lista editada con datos ya actualizados */
-    useEffect(()=>{
+    useEffect(() => {
         setListHeros(dataHerosEdit)
-    },[])  
+        fetch("https://dota2-6174.onrender.com/api/ping")
+            .then(res => {
+                console.log('ping ', res.status)
+            })
+    }, [])
 
 
 

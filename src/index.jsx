@@ -22,7 +22,7 @@ export function App() {
     return (
 
         <div className="App">
-            <div id='Nav'>
+            <div className='Nav xl:w-70 m-auto sticky top-0 z-50'>
                 <nav>
                     <ul>
                         <li><Link href="/home">Home</Link></li>

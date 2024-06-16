@@ -1,6 +1,6 @@
 .list-heroes {
     margin: 0 auto;
-    width: 80%;
+    /* width: 80%; */
     /* si se agregara nuevamente la barra al costado para el detalle del heroe, el porcentaje que ocupaba era 70-30 */
     height: auto;
 
@@ -9,8 +9,8 @@
 
 .list-heroes ul {
     display: grid;
-    grid-template-columns: repeat(6,
-            minmax(80px, 1fr));
+/*     grid-template-columns: repeat(6,
+            minmax(80px, 1fr)); */
     width: auto;
     height: auto;
     padding: 0;
