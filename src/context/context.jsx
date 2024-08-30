@@ -3,6 +3,7 @@ import { navigate } from 'wouter/use-location'
 import dataHerosEdit from "../mocks/dataHerosEdit.json"
 
 export const Context = createContext({})
+const urlApi = "https://serviciosunificados.onrender.com/d2"
 
 
 export function ContextProvider({ children }) {
@@ -22,35 +23,15 @@ export function ContextProvider({ children }) {
     //Funcion que le pide al servidor el dato del heroe mediante id,
     //Datos del herore al detalle.
     async function getDetailApi() {
-        const detailHero = await fetch(`https://dota2-6174.onrender.com/api/dota2/${heroSelected.id}`)
+        const detailHero = await fetch(`${urlApi}/detail/${heroSelected.id}`)
         const json = await detailHero.json()
         setHeroDetailSelected(json)
         return json
     }
 
-    //Llamada a servidor.
-    //Asigna todos los datos de todos los heroes, 
-    //Asigna heroe por defecto seleccionado, el primero de la lista
-
-    /* se me termino render :C 0 gb para usar el servidor */
-    /* Estare usando los nuevos datos dataHerosEdit ya que se agrego nueva categoria para atributos*/
-    /*          useEffect(() => {
-                fetch('https://dota2-6174.onrender.com/api/dota2')
-                    .then(response => response.json())
-                    .then(json => {
-                        setListHeros(json.listHeros) // Lista que se usa para dibujar todo el listado, pedido a la api
-                        setHeroSelected(json.listHeros[0])// Asignacion de primer elemento
-                    })
-                    .catch(err => {
-                        
-                        console.log('ERROR EN SERVIDOR, SOLICIANDO DATOS GUARDADOS(no hay)')
-                    })
-            }, [])  */
-
-    /* Estaremos usando la lista editada con datos ya actualizados */
     useEffect(() => {
         setListHeros(dataHerosEdit)
-        fetch("https://dota2-6174.onrender.com/api/ping")
+        fetch(`${urlApi}/ping`)
             .then(res => {
                 console.log('ping ', res.status)
             })
