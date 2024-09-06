@@ -13,7 +13,32 @@ body {
     padding: 0;
     font-family: "Roboto", sans-serif;
 }
+.shimmer {
+    position: absolute;
+    top: 0;
+    right: 1em;
+/*     width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    opacity: 40%; */
+    z-index: -1; /* Coloca el destello por debajo del contenido principal */
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Efecto de destello */
+    animation: shimmer-animation 10s infinite; /* Animación del destello */
+  }
 
+  @keyframes shimmer-animation {
+    0% {
+      box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.806);
+    }
+    50%{
+      box-shadow: 0 0 150px 40px rgba(255, 255, 255, 0.528);
+
+    }
+    100% {
+      box-shadow: 0 0 15px 10px rgb(255, 255, 255, 0.806);
+    }
+  }
 /* Estilos para el menú de navegación estilo medieval */
 .Nav nav {
     background-image: url("./public/navimgage.png");
