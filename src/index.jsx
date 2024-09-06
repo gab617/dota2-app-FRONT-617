@@ -25,7 +25,10 @@ export function App() {
       <div class="shimmer w-[25%] h-[50%] mt-[25em] blur-xl opacity-20 rounded-full"></div>
       <div className="Nav xl:w-70 m-auto sticky top-0 z-50">
         <nav>
-          <ul>
+          <div>
+
+          </div>
+          <ul className="glow-animated">
             <li>
               <Link href="/home">Home</Link>
             </li>

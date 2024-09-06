@@ -21,6 +21,10 @@
     box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
     background: rgb(211, 213, 219);
     border: 1px solid gold;
+    box-shadow: 0 0 20px rgba(16, 96, 12, 0.518), 
+              0 0 40px rgba(0, 255, 26, 0.214), 
+              0 0 60px rgba(19, 210, 41, 0.242);
+
   }
   
   .first-content {

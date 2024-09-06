@@ -19,8 +19,8 @@ export function HerosView() {
   }
 
   return (
-    <div className="list-heroes fade-in lg:w-80 lg:flex">
-      <div className="mr-7">
+    <div className="list-heroes fade-in lg:w-90 lg:flex">
+      <div className="lg:mr-7">
         <ListHerosSection
           filteredHeros={filteredHerosStr}
           handleImageError={handleImageError}

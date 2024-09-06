@@ -25,6 +25,7 @@ export function ListAbilities({ heroDetailSelected, handleMouseEnter, handleMous
                         >
                             <Ability
                                 img={ability.thumb_image}
+                                desc={ability.desc_loc}
                             />
                         </li>
                     ))
