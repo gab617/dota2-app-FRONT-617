@@ -19,15 +19,15 @@ import Hi from "./pages/Hi.jsx";
 export function App() {
   return (
     <div className="App">
-      <div class="shimmer w-40 h-40 mr-6 rounded-full  opacity-20 blur-md"></div>
-      <div class="shimmer w-[25%] h-[50%] blur-xl opacity-20 rounded-full"></div>
-      <div class="shimmer  w-[15em] h-[15em] mr-[25em] rounded-full  opacity-50 blur-lg"></div>
-      <div class="shimmer w-[25%] h-[50%] mt-[25em] blur-xl opacity-20 rounded-full"></div>
+      <div className="hidden sm:block">
+        <div class="shimmer w-40 h-40 mr-6 rounded-full  opacity-20 blur-md"></div>
+        <div class="shimmer w-[25%] h-[50%] blur-xl opacity-20 rounded-full"></div>
+        <div class="shimmer  w-[15em] h-[15em] mr-[25em] rounded-full  opacity-50 blur-lg"></div>
+        <div class="shimmer w-[25%] h-[50%] mt-[25em] blur-xl opacity-20 rounded-full"></div>
+      </div>
       <div className="Nav xl:w-70 m-auto sticky top-0 z-50">
         <nav>
-          <div>
-
-          </div>
+          <div></div>
           <ul className="glow-animated">
             <li>
               <Link href="/home">Home</Link>

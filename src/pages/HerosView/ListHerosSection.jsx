@@ -17,13 +17,14 @@ export function ListHerosSection({
       <ul
         className={`
                 ${className} 
-                grid-cols-3 
-                sm:grid-cols-7 
-                lg:grid-cols-11
-                lg:gap-1`}
+                grid-cols-3
+                sm:grid-cols-5
+                sm:gap-1
+                lg:grid-cols-8
+                `}
       >
         {filteredHeros.map((hero) => (
-          <li key={hero.id} className="m-auto sm:m-0">
+          <li key={hero.id} className=" m-auto sm:m-0">
             <HeroCard
               hero={hero}
               handleClick={handleClick}

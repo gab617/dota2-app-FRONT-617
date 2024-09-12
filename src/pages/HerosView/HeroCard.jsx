@@ -13,7 +13,7 @@ export function HeroCard({
           evt.preventDefault();
           handleClick(hero);
         }}
-        className="lg:flex justify-center items-end text-white card-hero w-20 h-24 sm:w-[100%] sm:h-[120px]"
+        className="lg:flex justify-center items-end text-white card-hero w-20 h-24 sm:w-[100%] sm:h-[91px]"
         style={{
           backgroundImage: `url(${hero.image || defectUrlImg})`,
           backgroundSize: "cover", // Ajusta el porcentaje para alejar la imagen
